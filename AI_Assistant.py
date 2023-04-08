@@ -6,6 +6,19 @@ import pygame
 import pyaudio
 import os
 import sys
+import pyttsx3
+
+#Empezamos las pruebas para la busqueda de una voz más realista
+# Crea un objeto de motor de texto a voz
+engine = pyttsx3.init()
+#ajustar la velocidad de pyttsx3
+engine.setProperty('rate', 160)
+# Establece la voz en español
+engine.setProperty('voice', 'spanish')
+# Sintetiza el texto en voz
+engine.say('Hola, esto es una prueba de voz en español utilizando pyttsx3')
+# Reproduce el audio generado
+engine.runAndWait()
 
 def select_microphone():
     p = pyaudio.PyAudio()
