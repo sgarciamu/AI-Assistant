@@ -1,2 +1,3 @@
 # AI-Assistant
-Project of an intelligent assistant through ChatGPT and Voice
+Project of an intelligent assistant with voice through ChatGPT
+
