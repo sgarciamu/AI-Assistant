@@ -7,7 +7,6 @@ import pyaudio
 import os
 import sys
 
-
 def select_microphone():
     p = pyaudio.PyAudio()
     info = p.get_host_api_info_by_index(0)
@@ -54,6 +53,7 @@ def transcribe_audio(device_index):
             print(f"Lo siento, hubo un error al realizar la solicitud: {e}")
         except Exception as e:
             print(f"Se produjo un error inesperado: {e}")
+       
 
 def text_to_speech(text, filename):
     tts = gTTS(text=text, lang='es', slow=False)
@@ -69,7 +69,7 @@ def chat_completions(input_text, temperature):
     api_key = os.environ.get('API_KEY')
     if api_key is None:
         print("La variable de entorno API_KEY no está definida.")
-        print("Por favor, define la variable de entorno con el siguiente comando: ")
+        print("Por favor, define la variable de entorno con el siguiente comando: \n")
         print("export API_KEY='tu_api_key_aqui'")
         sys.exit()
     
